@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356F323E1B7FA8E000C6D8C6 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 356F323D1B7FA8E000C6D8C6 /* FontAwesome.ttf */; };
+		356F324B1B7FE89900C6D8C6 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F32461B7FE89900C6D8C6 /* NSDate+Formatter.m */; };
+		356F324C1B7FE89900C6D8C6 /* NSString+CellDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F32481B7FE89900C6D8C6 /* NSString+CellDimensions.m */; };
+		356F324D1B7FE89900C6D8C6 /* UIColor+Reddit.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F324A1B7FE89900C6D8C6 /* UIColor+Reddit.m */; };
+		356F32511B7FE8A300C6D8C6 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F324F1B7FE8A300C6D8C6 /* PostCell.m */; };
+		356F32521B7FE8A300C6D8C6 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356F32501B7FE8A300C6D8C6 /* PostCell.xib */; };
+		356F32551B7FE8B200C6D8C6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F32541B7FE8B200C6D8C6 /* Post.m */; };
+		356F32581B7FE8BD00C6D8C6 /* AlienFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F32571B7FE8BD00C6D8C6 /* AlienFeedViewController.m */; };
+		356F325B1B7FE8CA00C6D8C6 /* RedditClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F325A1B7FE8CA00C6D8C6 /* RedditClient.m */; };
 		35A608521B47A94A00853175 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A608511B47A94A00853175 /* main.m */; };
 		35A608551B47A94A00853175 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A608541B47A94A00853175 /* AppDelegate.m */; };
-		35A608581B47A94A00853175 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A608571B47A94A00853175 /* ViewController.m */; };
-		35A6085B1B47A94A00853175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A608591B47A94A00853175 /* Main.storyboard */; };
 		35A6085D1B47A94A00853175 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A6085C1B47A94A00853175 /* Images.xcassets */; };
 		35A608601B47A94A00853175 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35A6085E1B47A94A00853175 /* LaunchScreen.xib */; };
 		35A6086C1B47A94A00853175 /* AlienCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6086B1B47A94A00853175 /* AlienCloneTests.m */; };
+		403B06C5C1D9058CE9C4AEFA /* libPods-AlienClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB0E2C5C3AB041A84E9705A /* libPods-AlienClone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +35,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		356F323D1B7FA8E000C6D8C6 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		356F32451B7FE89900C6D8C6 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Formatter.h"; path = "Categories/NSDate+Formatter.h"; sourceTree = "<group>"; };
+		356F32461B7FE89900C6D8C6 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Formatter.m"; path = "Categories/NSDate+Formatter.m"; sourceTree = "<group>"; };
+		356F32471B7FE89900C6D8C6 /* NSString+CellDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+CellDimensions.h"; path = "Categories/NSString+CellDimensions.h"; sourceTree = "<group>"; };
+		356F32481B7FE89900C6D8C6 /* NSString+CellDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+CellDimensions.m"; path = "Categories/NSString+CellDimensions.m"; sourceTree = "<group>"; };
+		356F32491B7FE89900C6D8C6 /* UIColor+Reddit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Reddit.h"; path = "Categories/UIColor+Reddit.h"; sourceTree = "<group>"; };
+		356F324A1B7FE89900C6D8C6 /* UIColor+Reddit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Reddit.m"; path = "Categories/UIColor+Reddit.m"; sourceTree = "<group>"; };
+		356F324E1B7FE8A300C6D8C6 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostCell.h; path = Views/PostCell.h; sourceTree = "<group>"; };
+		356F324F1B7FE8A300C6D8C6 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostCell.m; path = Views/PostCell.m; sourceTree = "<group>"; };
+		356F32501B7FE8A300C6D8C6 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostCell.xib; path = Views/PostCell.xib; sourceTree = "<group>"; };
+		356F32531B7FE8B200C6D8C6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Models/Post.h; sourceTree = "<group>"; };
+		356F32541B7FE8B200C6D8C6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Models/Post.m; sourceTree = "<group>"; };
+		356F32561B7FE8BD00C6D8C6 /* AlienFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlienFeedViewController.h; path = Controllers/AlienFeedViewController.h; sourceTree = "<group>"; };
+		356F32571B7FE8BD00C6D8C6 /* AlienFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlienFeedViewController.m; path = Controllers/AlienFeedViewController.m; sourceTree = "<group>"; };
+		356F32591B7FE8CA00C6D8C6 /* RedditClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditClient.h; path = API/RedditClient.h; sourceTree = "<group>"; };
+		356F325A1B7FE8CA00C6D8C6 /* RedditClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditClient.m; path = API/RedditClient.m; sourceTree = "<group>"; };
 		35A6084C1B47A94A00853175 /* AlienClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A608501B47A94A00853175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A608511B47A94A00853175 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35A608531B47A94A00853175 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35A608541B47A94A00853175 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		35A608561B47A94A00853175 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		35A608571B47A94A00853175 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		35A6085A1B47A94A00853175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35A6085C1B47A94A00853175 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35A6085F1B47A94A00853175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		35A608651B47A94A00853175 /* AlienCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlienCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A6086A1B47A94A00853175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A6086B1B47A94A00853175 /* AlienCloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlienCloneTests.m; sourceTree = "<group>"; };
+		5044FF3E884F5671CD1C8FBC /* Pods-AlienClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlienClone/Pods-AlienClone.debug.xcconfig"; sourceTree = "<group>"; };
+		8552B33FD1874AEBE916BAA0 /* Pods-AlienClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlienClone/Pods-AlienClone.release.xcconfig"; sourceTree = "<group>"; };
+		FFB0E2C5C3AB041A84E9705A /* libPods-AlienClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlienClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403B06C5C1D9058CE9C4AEFA /* libPods-AlienClone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +91,8 @@
 				35A6084E1B47A94A00853175 /* AlienClone */,
 				35A608681B47A94A00853175 /* AlienCloneTests */,
 				35A6084D1B47A94A00853175 /* Products */,
+				E6502F14F4BC6731B451AD05 /* Pods */,
+				3CAEEB3CD4F9EA25234DAD80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +108,13 @@
 		35A6084E1B47A94A00853175 /* AlienClone */ = {
 			isa = PBXGroup;
 			children = (
+				35A63D281B4CD20C00C50B60 /* Categories */,
+				35A63D271B4CD20600C50B60 /* Views */,
+				35A63D261B4CD20000C50B60 /* Models */,
+				35A63D251B4CD15000C50B60 /* Controllers */,
+				35A63D241B4CD13900C50B60 /* API */,
 				35A608531B47A94A00853175 /* AppDelegate.h */,
 				35A608541B47A94A00853175 /* AppDelegate.m */,
-				35A608561B47A94A00853175 /* ViewController.h */,
-				35A608571B47A94A00853175 /* ViewController.m */,
-				35A608591B47A94A00853175 /* Main.storyboard */,
 				35A6085C1B47A94A00853175 /* Images.xcassets */,
 				35A6085E1B47A94A00853175 /* LaunchScreen.xib */,
 				35A6084F1B47A94A00853175 /* Supporting Files */,
@@ -96,6 +125,7 @@
 		35A6084F1B47A94A00853175 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				356F323D1B7FA8E000C6D8C6 /* FontAwesome.ttf */,
 				35A608501B47A94A00853175 /* Info.plist */,
 				35A608511B47A94A00853175 /* main.m */,
 			);
@@ -119,6 +149,73 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		35A63D241B4CD13900C50B60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				356F32591B7FE8CA00C6D8C6 /* RedditClient.h */,
+				356F325A1B7FE8CA00C6D8C6 /* RedditClient.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		35A63D251B4CD15000C50B60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				356F32561B7FE8BD00C6D8C6 /* AlienFeedViewController.h */,
+				356F32571B7FE8BD00C6D8C6 /* AlienFeedViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		35A63D261B4CD20000C50B60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				356F32531B7FE8B200C6D8C6 /* Post.h */,
+				356F32541B7FE8B200C6D8C6 /* Post.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		35A63D271B4CD20600C50B60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				356F324E1B7FE8A300C6D8C6 /* PostCell.h */,
+				356F324F1B7FE8A300C6D8C6 /* PostCell.m */,
+				356F32501B7FE8A300C6D8C6 /* PostCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		35A63D281B4CD20C00C50B60 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				356F32451B7FE89900C6D8C6 /* NSDate+Formatter.h */,
+				356F32461B7FE89900C6D8C6 /* NSDate+Formatter.m */,
+				356F32471B7FE89900C6D8C6 /* NSString+CellDimensions.h */,
+				356F32481B7FE89900C6D8C6 /* NSString+CellDimensions.m */,
+				356F32491B7FE89900C6D8C6 /* UIColor+Reddit.h */,
+				356F324A1B7FE89900C6D8C6 /* UIColor+Reddit.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		3CAEEB3CD4F9EA25234DAD80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFB0E2C5C3AB041A84E9705A /* libPods-AlienClone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6502F14F4BC6731B451AD05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5044FF3E884F5671CD1C8FBC /* Pods-AlienClone.debug.xcconfig */,
+				8552B33FD1874AEBE916BAA0 /* Pods-AlienClone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35A6086F1B47A94A00853175 /* Build configuration list for PBXNativeTarget "AlienClone" */;
 			buildPhases = (
+				7D907D6ADB4E0D42047FDAE2 /* Check Pods Manifest.lock */,
 				35A608481B47A94A00853175 /* Sources */,
 				35A608491B47A94A00853175 /* Frameworks */,
 				35A6084A1B47A94A00853175 /* Resources */,
+				D2719659145E26DE64D878D5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A6085B1B47A94A00853175 /* Main.storyboard in Resources */,
 				35A608601B47A94A00853175 /* LaunchScreen.xib in Resources */,
 				35A6085D1B47A94A00853175 /* Images.xcassets in Resources */,
+				356F323E1B7FA8E000C6D8C6 /* FontAwesome.ttf in Resources */,
+				356F32521B7FE8A300C6D8C6 /* PostCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +314,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D907D6ADB4E0D42047FDAE2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2719659145E26DE64D878D5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlienClone/Pods-AlienClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35A608481B47A94A00853175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A608581B47A94A00853175 /* ViewController.m in Sources */,
+				356F32581B7FE8BD00C6D8C6 /* AlienFeedViewController.m in Sources */,
+				356F324D1B7FE89900C6D8C6 /* UIColor+Reddit.m in Sources */,
+				356F324C1B7FE89900C6D8C6 /* NSString+CellDimensions.m in Sources */,
 				35A608551B47A94A00853175 /* AppDelegate.m in Sources */,
 				35A608521B47A94A00853175 /* main.m in Sources */,
+				356F325B1B7FE8CA00C6D8C6 /* RedditClient.m in Sources */,
+				356F324B1B7FE89900C6D8C6 /* NSDate+Formatter.m in Sources */,
+				356F32511B7FE8A300C6D8C6 /* PostCell.m in Sources */,
+				356F32551B7FE8B200C6D8C6 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +383,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		35A608591B47A94A00853175 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35A6085A1B47A94A00853175 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		35A6085E1B47A94A00853175 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -347,6 +478,7 @@
 		};
 		35A608701B47A94A00853175 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5044FF3E884F5671CD1C8FBC /* Pods-AlienClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AlienClone/Info.plist;
@@ -357,6 +489,7 @@
 		};
 		35A608711B47A94A00853175 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8552B33FD1874AEBE916BAA0 /* Pods-AlienClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AlienClone/Info.plist;
@@ -418,6 +551,7 @@
 				35A608711B47A94A00853175 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35A608721B47A94A00853175 /* Build configuration list for PBXNativeTarget "AlienCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +560,7 @@
 				35A608741B47A94A00853175 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
