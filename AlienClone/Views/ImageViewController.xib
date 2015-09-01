@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController">
+            <connections>
+                <outlet property="progressView" destination="pEN-yW-iBB" id="7cJ-4k-j9E"/>
+                <outlet property="scrollView" destination="FsK-7d-muM" id="WYy-YM-96z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pEN-yW-iBB">
+                    <rect key="frame" x="0.0" y="66" width="600" height="2"/>
+                    <color key="progressTintColor" red="0.80784313730000001" green="0.89019607840000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                </progressView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="FsK-7d-muM">
+                    <rect key="frame" x="0.0" y="65" width="600" height="535"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pEN-yW-iBB" secondAttribute="trailing" id="Alc-ZZ-COg"/>
+                <constraint firstAttribute="bottom" secondItem="FsK-7d-muM" secondAttribute="bottom" id="c2J-Fb-zXY"/>
+                <constraint firstAttribute="trailing" secondItem="FsK-7d-muM" secondAttribute="trailing" id="gYP-cV-mHu"/>
+                <constraint firstItem="pEN-yW-iBB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rhR-T0-OTP"/>
+                <constraint firstItem="FsK-7d-muM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="v9h-zD-JqE"/>
+                <constraint firstItem="pEN-yW-iBB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="wr0-0e-ccr"/>
+                <constraint firstItem="FsK-7d-muM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yjN-Xf-90C"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+</document>

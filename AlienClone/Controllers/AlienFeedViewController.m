@@ -14,9 +14,13 @@
 #import "UIColor+Reddit.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "NSDate+Formatter.h"
+#import "ImageViewController.h"
+#import "LinkViewController.h"
+#import "CommentsViewController.h"
+#import <FontAwesomeKit/FontAwesomeKit.h>
 
-@interface AlienFeedViewController ()
-@property (strong, nonatomic) NSArray *posts;
+@interface AlienFeedViewController () <PostCellDelegate>
+@property (strong, nonatomic) NSMutableArray *posts;
 @property (strong, nonatomic) NSDate *lastUpdated;
 @end
 
@@ -24,10 +28,18 @@
 
 static NSString *PostCellIdentifier = @"PostCell";
 
+-(instancetype)initWithSubReddit:(NSString *)subReddit {
+    self = [super init];
+    if (self) {
+        self.subReddit = subReddit;
+        self.title = subReddit;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"AlienClone";
-    
+    self.tableView.allowsSelection = NO;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     UIColor *redditColor = [UIColor redditBlue];
     self.tableView.backgroundColor = redditColor;
@@ -42,6 +54,18 @@ static NSString *PostCellIdentifier = @"PostCell";
                                 bundle:nil];
     [self.tableView registerNib:nib
          forCellReuseIdentifier:PostCellIdentifier];
+    
+    if (!self.subReddit) {
+        FAKFontAwesome *hamburgurIcon = [FAKFontAwesome barsIconWithSize:18];
+        UIImage *hamburgurPicture = [hamburgurIcon imageWithSize:CGSizeMake(20, 20)];
+        UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:hamburgurPicture
+                                                                              style:UIBarButtonItemStyleDone
+                                                                             target:self
+                                                                             action:@selector(buttonPressed:)];
+        leftBarButtonItem.tintColor = [UIColor redditOrange];
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    }
+    
     [self refreshFeed];
 }
 
@@ -52,17 +76,38 @@ static NSString *PostCellIdentifier = @"PostCell";
 
 -(void)refreshFeed {
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading Feed", nil)];
-    [RedditClient getFeedWithSuccessBlock:^(NSArray *posts) {
-        self.posts = posts;
-        [SVProgressHUD dismiss];
-        [self.tableView reloadData];
-        [self.refreshControl endRefreshing];
-        self.lastUpdated = [NSDate date];
-        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Last Updated: %@", [self.lastUpdated toFormattedDate]]];
-    } andFailure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
-        [self.refreshControl endRefreshing];
-    }];
+    if (self.subReddit) {
+        [RedditClient getSubRedditFeed:self.subReddit withSuccessBlock:^(NSArray *posts) {
+            [self apiSuccessBlockWithPosts:posts];
+        } andFailure:^(NSError *error) {
+            [self apiFailureBlockWithError:error];
+        }];
+
+    } else {
+        [RedditClient getFeedWithSuccessBlock:^(NSArray *posts) {
+            [self apiSuccessBlockWithPosts:posts];
+        } andFailure:^(NSError *error) {
+            [self apiFailureBlockWithError:error];
+        }];
+    }
+}
+
+-(void)buttonPressed:(id)sender {
+    NSLog(@"foo: %@", sender);
+}
+
+-(void)apiSuccessBlockWithPosts:(NSArray *)posts {
+    self.posts = [posts mutableCopy];
+    [SVProgressHUD dismiss];
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
+    self.lastUpdated = [NSDate date];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Last Updated: %@", [self.lastUpdated toFormattedDate]]];
+}
+
+-(void)apiFailureBlockWithError:(NSError *)error {
+    [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -75,23 +120,17 @@ static NSString *PostCellIdentifier = @"PostCell";
     return self.posts.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    PostCell *cell;
-    NSUInteger nodeCount = self.posts.count;
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:PostCellIdentifier
+                                                     forIndexPath:indexPath];
+    Post *post = self.posts[indexPath.row];
+    cell.post = post;
+    cell.delegate = self;
     
-    if (nodeCount == 0 && indexPath.row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"PlaceholderCellIdentifier"
-                                               forIndexPath:indexPath];
-        cell.titleLabel.text = @"Loading...";
-    } else {
-        Post *post = self.posts[indexPath.row];
-        cell = [tableView dequeueReusableCellWithIdentifier:PostCellIdentifier
-                                               forIndexPath:indexPath];
-        cell.post = post;
+    if (indexPath.row ==  self.posts.count-1) {
+        NSLog(@"load more");
     }
-    
-    
+
     return cell;
 }
 
@@ -113,6 +152,37 @@ static NSString *PostCellIdentifier = @"PostCell";
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
+}
+
+#pragma mark PostCellDelegate
+
+-(void)didSelectTitleLabelForPost:(Post *)post {
+    if (post.isSelfPost) {
+        LinkViewController *linkViewController = [[LinkViewController alloc] initWithNibName:@"LinkViewController" bundle:nil];
+        linkViewController.post = post;
+        [self.navigationController pushViewController:linkViewController animated:YES];
+    } else {
+        [self didSelectCommentsLabelForPost:post];
+    }
+}
+
+-(void)didSelectThumbnailViewForPost:(Post *)post {
+    ImageViewController *imageViewController = [[ImageViewController alloc] initWithPost:post];
+    [self.navigationController pushViewController:imageViewController animated:YES];
+}
+
+-(void)didSelectCommentsLabelForPost:(Post *)post {
+    CommentsViewController *commentsViewController = [[CommentsViewController alloc] initWithPost:post];
+    [self.navigationController pushViewController:commentsViewController animated:YES];
+}
+
+-(void)didSelectAuthorLabelForPost:(Post *)post {
+    
+}
+
+-(void)didSelectSubRedditLabelForPost:(Post *)post {
+    AlienFeedViewController *subRedditViewController = [[AlienFeedViewController alloc] initWithSubReddit:post.subreddit];
+    [self.navigationController pushViewController:subRedditViewController animated:YES];
 }
 
 @end

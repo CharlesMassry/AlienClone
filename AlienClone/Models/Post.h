@@ -17,10 +17,18 @@
 @property (strong, nonatomic) NSString *author;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSDate *createdAt;
-@property (nonatomic) NSInteger score;
-@property (nonatomic) NSUInteger commentsCount;
+
 @property (strong, nonatomic) NSString *thumbnailURLString;
 @property (strong, nonatomic) NSURL *thumbnailURL;
+@property (strong, nonatomic) NSString *imageURLString;
+@property (strong, nonatomic) NSURL *imageURL;
+@property (strong, nonatomic) NSString *linkURLString;
+@property (strong, nonatomic) NSURL *linkURL;
+
+@property (nonatomic) NSInteger score;
+@property (nonatomic) NSUInteger commentsCount;
+@property (nonatomic) BOOL isSelfPost;
 
 +(NSArray *)postsWithJSON:(NSArray *)JSONArray;
+-(instancetype)initWithJSON:(NSDictionary *)JSON;
 @end

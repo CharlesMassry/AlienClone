@@ -7,10 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Post.h"
+@class Post;
+
+
+@protocol PostCellDelegate <NSObject>
+
+@required
+- (void) didSelectTitleLabelForPost:(Post *)post;
+- (void) didSelectThumbnailViewForPost:(Post *)post;
+- (void) didSelectCommentsLabelForPost:(Post *)post;
+- (void) didSelectAuthorLabelForPost:(Post *)post;
+- (void) didSelectSubRedditLabelForPost:(Post *)post;
+@end
+
 
 @interface PostCell : UITableViewCell
 @property (strong, nonatomic) Post *post;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
+@property (nonatomic, assign) id <PostCellDelegate> delegate;
 @end
+

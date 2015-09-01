@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef void(^SuccessBlock)(id responseObject);
-typedef void(^FailureBlock)(id responseObject);
+@class Post;
+typedef void(^PostsSuccessBlock)(NSArray *posts);
+typedef void(^FailureBlock)(NSError *error);
+typedef void(^ImageProgressBlock)(CGFloat percentDone);
+typedef void(^ImageSuccessBlock)(UIImage *image);
+typedef void(^PostSuccessBlock)(Post *post, NSArray *comments);
 
 @interface RedditClient : NSObject
-+(void)getFeedWithSuccessBlock:(SuccessBlock)block andFailure:(FailureBlock)failure;
-+(void)getImageFromURL:(NSURL *)url withSuccess:(SuccessBlock)successBlock andFailure:(FailureBlock)failureBlock;
++(void)getFeedWithSuccessBlock:(PostsSuccessBlock)block andFailure:(FailureBlock)failure;
++(void)getSubRedditFeed:(NSString *)subReddit withSuccessBlock:(PostsSuccessBlock)block andFailure:(FailureBlock)failure;
++(void)getImageForPost:(Post *)post progress:(ImageProgressBlock)progress success:(ImageSuccessBlock)success failure:(FailureBlock)failure;
++(void)getCommentsForPost:(Post *)post success:(PostSuccessBlock)success failure:(FailureBlock)failure;
 @end

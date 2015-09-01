@@ -8,6 +8,7 @@ target 'AlienClone' do
   pod 'SDWebImage', '~>3.7'
   pod 'SVProgressHUD'
   pod 'DateTools'
+  pod 'LGSideMenuController', '~> 1.0.0'
 end
 
 target 'AlienCloneTests' do

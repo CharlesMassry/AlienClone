@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AlienFeedViewController : UITableViewController
-
+@property (strong, nonatomic) NSString *subReddit;
 @end

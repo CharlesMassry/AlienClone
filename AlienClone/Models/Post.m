@@ -32,12 +32,17 @@
         _subredditId = JSON[@"subreddit_id"];
         _author = JSON[@"author"];
         _title = JSON[@"title"];
+        _isSelfPost = JSON[@"is_self"];
         _createdAt = [NSDate dateWithTimeIntervalSince1970:[JSON[@"created"] doubleValue]];
         _score = [JSON[@"score"] integerValue];
         _commentsCount = [JSON[@"num_comments"] integerValue];
-
+        _imageURLString = [JSON[@"preview"][@"images"] firstObject][@"source"][@"url"];
+        _imageURL = [NSURL URLWithString:_imageURLString];
         _thumbnailURLString = JSON[@"thumbnail"];
         _thumbnailURL = [NSURL URLWithString:_thumbnailURLString];
+        _linkURLString = JSON[@"url"];
+        _linkURL = [NSURL URLWithString:_linkURLString];
+        _isSelfPost = JSON[@"is_self"];
     }
     
     return self;

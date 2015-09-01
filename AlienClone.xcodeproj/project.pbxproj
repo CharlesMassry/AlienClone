@@ -16,11 +16,21 @@
 		356F32551B7FE8B200C6D8C6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F32541B7FE8B200C6D8C6 /* Post.m */; };
 		356F32581B7FE8BD00C6D8C6 /* AlienFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F32571B7FE8BD00C6D8C6 /* AlienFeedViewController.m */; };
 		356F325B1B7FE8CA00C6D8C6 /* RedditClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 356F325A1B7FE8CA00C6D8C6 /* RedditClient.m */; };
+		357A1E731B87A8DE0030E395 /* PostCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357A1E711B87A8DE0030E395 /* PostCommentCell.m */; };
+		357A1E741B87A8DE0030E395 /* PostCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357A1E721B87A8DE0030E395 /* PostCommentCell.xib */; };
+		357A1E781B87A9060030E395 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357A1E761B87A9060030E395 /* CommentCell.m */; };
+		357A1E791B87A9060030E395 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357A1E771B87A9060030E395 /* CommentCell.xib */; };
 		35A608521B47A94A00853175 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A608511B47A94A00853175 /* main.m */; };
 		35A608551B47A94A00853175 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A608541B47A94A00853175 /* AppDelegate.m */; };
 		35A6085D1B47A94A00853175 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A6085C1B47A94A00853175 /* Images.xcassets */; };
 		35A608601B47A94A00853175 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35A6085E1B47A94A00853175 /* LaunchScreen.xib */; };
 		35A6086C1B47A94A00853175 /* AlienCloneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A6086B1B47A94A00853175 /* AlienCloneTests.m */; };
+		35AA76F81B864D560033321A /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA76F61B864D560033321A /* LinkViewController.m */; };
+		35AA76FB1B864D920033321A /* LinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35AA76FA1B864D920033321A /* LinkViewController.xib */; };
+		35AA76FF1B86555B0033321A /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA76FD1B86555B0033321A /* CommentsViewController.m */; };
+		35AA77051B8657240033321A /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA77041B8657240033321A /* Comment.m */; };
+		35FEB7401B819598005568E6 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FEB73E1B819598005568E6 /* ImageViewController.m */; };
+		35FEB7431B819636005568E6 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FEB7421B819636005568E6 /* ImageViewController.xib */; };
 		403B06C5C1D9058CE9C4AEFA /* libPods-AlienClone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB0E2C5C3AB041A84E9705A /* libPods-AlienClone.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +61,12 @@
 		356F32571B7FE8BD00C6D8C6 /* AlienFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlienFeedViewController.m; path = Controllers/AlienFeedViewController.m; sourceTree = "<group>"; };
 		356F32591B7FE8CA00C6D8C6 /* RedditClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditClient.h; path = API/RedditClient.h; sourceTree = "<group>"; };
 		356F325A1B7FE8CA00C6D8C6 /* RedditClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditClient.m; path = API/RedditClient.m; sourceTree = "<group>"; };
+		357A1E701B87A8DE0030E395 /* PostCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostCommentCell.h; path = Views/PostCommentCell.h; sourceTree = "<group>"; };
+		357A1E711B87A8DE0030E395 /* PostCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostCommentCell.m; path = Views/PostCommentCell.m; sourceTree = "<group>"; };
+		357A1E721B87A8DE0030E395 /* PostCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostCommentCell.xib; path = Views/PostCommentCell.xib; sourceTree = "<group>"; };
+		357A1E751B87A9060030E395 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentCell.h; path = Views/CommentCell.h; sourceTree = "<group>"; };
+		357A1E761B87A9060030E395 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentCell.m; path = Views/CommentCell.m; sourceTree = "<group>"; };
+		357A1E771B87A9060030E395 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentCell.xib; path = Views/CommentCell.xib; sourceTree = "<group>"; };
 		35A6084C1B47A94A00853175 /* AlienClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A608501B47A94A00853175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A608511B47A94A00853175 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -61,6 +77,16 @@
 		35A608651B47A94A00853175 /* AlienCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlienCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A6086A1B47A94A00853175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A6086B1B47A94A00853175 /* AlienCloneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlienCloneTests.m; sourceTree = "<group>"; };
+		35AA76F51B864D560033321A /* LinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkViewController.h; path = Controllers/LinkViewController.h; sourceTree = "<group>"; };
+		35AA76F61B864D560033321A /* LinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkViewController.m; path = Controllers/LinkViewController.m; sourceTree = "<group>"; };
+		35AA76FA1B864D920033321A /* LinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LinkViewController.xib; path = Views/LinkViewController.xib; sourceTree = "<group>"; };
+		35AA76FC1B86555B0033321A /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentsViewController.h; path = Controllers/CommentsViewController.h; sourceTree = "<group>"; };
+		35AA76FD1B86555B0033321A /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentsViewController.m; path = Controllers/CommentsViewController.m; sourceTree = "<group>"; };
+		35AA77031B8657240033321A /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		35AA77041B8657240033321A /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		35FEB73D1B819598005568E6 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = Controllers/ImageViewController.h; sourceTree = "<group>"; };
+		35FEB73E1B819598005568E6 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = Controllers/ImageViewController.m; sourceTree = "<group>"; };
+		35FEB7421B819636005568E6 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageViewController.xib; path = Views/ImageViewController.xib; sourceTree = "<group>"; };
 		5044FF3E884F5671CD1C8FBC /* Pods-AlienClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlienClone/Pods-AlienClone.debug.xcconfig"; sourceTree = "<group>"; };
 		8552B33FD1874AEBE916BAA0 /* Pods-AlienClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlienClone/Pods-AlienClone.release.xcconfig"; sourceTree = "<group>"; };
 		FFB0E2C5C3AB041A84E9705A /* libPods-AlienClone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlienClone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +189,12 @@
 			children = (
 				356F32561B7FE8BD00C6D8C6 /* AlienFeedViewController.h */,
 				356F32571B7FE8BD00C6D8C6 /* AlienFeedViewController.m */,
+				35FEB73D1B819598005568E6 /* ImageViewController.h */,
+				35FEB73E1B819598005568E6 /* ImageViewController.m */,
+				35AA76F51B864D560033321A /* LinkViewController.h */,
+				35AA76F61B864D560033321A /* LinkViewController.m */,
+				35AA76FC1B86555B0033321A /* CommentsViewController.h */,
+				35AA76FD1B86555B0033321A /* CommentsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +204,8 @@
 			children = (
 				356F32531B7FE8B200C6D8C6 /* Post.h */,
 				356F32541B7FE8B200C6D8C6 /* Post.m */,
+				35AA77031B8657240033321A /* Comment.h */,
+				35AA77041B8657240033321A /* Comment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -179,9 +213,17 @@
 		35A63D271B4CD20600C50B60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35AA76FA1B864D920033321A /* LinkViewController.xib */,
 				356F324E1B7FE8A300C6D8C6 /* PostCell.h */,
 				356F324F1B7FE8A300C6D8C6 /* PostCell.m */,
 				356F32501B7FE8A300C6D8C6 /* PostCell.xib */,
+				35FEB7421B819636005568E6 /* ImageViewController.xib */,
+				357A1E701B87A8DE0030E395 /* PostCommentCell.h */,
+				357A1E711B87A8DE0030E395 /* PostCommentCell.m */,
+				357A1E721B87A8DE0030E395 /* PostCommentCell.xib */,
+				357A1E751B87A9060030E395 /* CommentCell.h */,
+				357A1E761B87A9060030E395 /* CommentCell.m */,
+				357A1E771B87A9060030E395 /* CommentCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -299,7 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A608601B47A94A00853175 /* LaunchScreen.xib in Resources */,
+				357A1E741B87A8DE0030E395 /* PostCommentCell.xib in Resources */,
 				35A6085D1B47A94A00853175 /* Images.xcassets in Resources */,
+				357A1E791B87A9060030E395 /* CommentCell.xib in Resources */,
+				35AA76FB1B864D920033321A /* LinkViewController.xib in Resources */,
+				35FEB7431B819636005568E6 /* ImageViewController.xib in Resources */,
 				356F323E1B7FA8E000C6D8C6 /* FontAwesome.ttf in Resources */,
 				356F32521B7FE8A300C6D8C6 /* PostCell.xib in Resources */,
 			);
@@ -355,11 +401,17 @@
 				356F32581B7FE8BD00C6D8C6 /* AlienFeedViewController.m in Sources */,
 				356F324D1B7FE89900C6D8C6 /* UIColor+Reddit.m in Sources */,
 				356F324C1B7FE89900C6D8C6 /* NSString+CellDimensions.m in Sources */,
+				357A1E731B87A8DE0030E395 /* PostCommentCell.m in Sources */,
+				35FEB7401B819598005568E6 /* ImageViewController.m in Sources */,
 				35A608551B47A94A00853175 /* AppDelegate.m in Sources */,
 				35A608521B47A94A00853175 /* main.m in Sources */,
 				356F325B1B7FE8CA00C6D8C6 /* RedditClient.m in Sources */,
+				35AA76F81B864D560033321A /* LinkViewController.m in Sources */,
+				35AA77051B8657240033321A /* Comment.m in Sources */,
+				35AA76FF1B86555B0033321A /* CommentsViewController.m in Sources */,
 				356F324B1B7FE89900C6D8C6 /* NSDate+Formatter.m in Sources */,
 				356F32511B7FE8A300C6D8C6 /* PostCell.m in Sources */,
+				357A1E781B87A9060030E395 /* CommentCell.m in Sources */,
 				356F32551B7FE8B200C6D8C6 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

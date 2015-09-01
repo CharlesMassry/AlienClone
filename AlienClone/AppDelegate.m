@@ -21,6 +21,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     AlienFeedViewController *feedController = [[AlienFeedViewController alloc] init];
+    feedController.title = @"AlienSpotter";
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:feedController];
     self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
